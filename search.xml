@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>小学期之keil的使用</title>
+      <link href="/keil/"/>
+      <url>/keil/</url>
+      
+        <content type="html"><![CDATA[<h2 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h2><p>首先，你得要有个keil。至于怎么来，emmmm,自己百度。安装同理。毕竟我已经安好了，这篇文章也是为了以后自己还会用，所以就不写安装过程了。(其实是太多了，懒得写)</p><hr><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><h3 id="打开软件"><a href="#打开软件" class="headerlink" title="打开软件"></a>打开软件</h3><p>emmmm，如题。</p><hr><h3 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h3><p>在顶部导航栏点击“project”，然后点击new uVision project，点击后在文件框中填写你的工程名，名字可以是任意英文字符组成的（在此时你最好在你所希望存储该工程的地方新建一文件夹）。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/a0e8a486-f93f-46e1-bd40-9314be0185c1.png"></p><hr><h3 id="选择芯片"><a href="#选择芯片" class="headerlink" title="选择芯片"></a>选择芯片</h3><p>输入工程名后会出现如下图所示的芯片选择对话框，选择你开发板上的型号即可（相信要看这张帖子的人是在学51单片机，此时只需选择Atmel,然后点击AT89c51即可。如下第二张图所示）。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/e244a3b1-8099-414e-bf89-0259df0e16cd.png"></p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/7506080f-ba4a-4741-b068-77847cc272ba.png"></p><hr><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>接下来会出现如下图所示画面，是跳入C函数之前执行的一段汇编代码，不加就用默认的启动代码，加了你没修改这段代码，那还是相当于用默认的启动代码，这时加和没加都一样。</p><p>比如说，你想另外设置SP的值，不用默入的，就可以加入，然后修改SP。</p><p>反正这个启动代码不用改，加不加无所谓。</p><p>根据你项目的需求决定是否添加。</p><p>如果你采用汇编语言写程序，建议别添加，添了还得改模块名称，麻烦。</p><p>如果你采用C语言，添加了有好处，避免你忘记有些初始化工作</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/31e5513f-5f93-4ea4-a8c5-5b71919ad98e.png"></p><hr><h3 id="文件创建及添加到工程项目"><a href="#文件创建及添加到工程项目" class="headerlink" title="文件创建及添加到工程项目"></a>文件创建及添加到工程项目</h3><p>接下来出现下面第一张图，先点击红色方框内新建文件，再点击蓝色方框内保存按钮。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/68810a22-1dca-48d1-8f90-4ea5d9a1d27d.png"></p><p>点击保存按钮后输入源文件名称加后缀名（如果你是用C语言编写程序后缀名为*.c;如果你是用汇编语言编写程序则后缀名为*.asm）并点击确认保存。</p><p>接下来的一步是将源文件加入到工程中，点击选中“源组1”（source group 1）并右击，再点击添加文件（Add files to）到源组1即可。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/1f177329-52b1-4ffb-a548-36317bcf91cb.png"></p><hr><h3 id="文件编译及hex文件生成"><a href="#文件编译及hex文件生成" class="headerlink" title="文件编译及hex文件生成"></a>文件编译及hex文件生成</h3><p>首先点击下图中红色方框内按钮，如果文件编写无误，应出现二图中0error提示(应该不会有人去管waring吧)。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/e67279d5-35c0-4f10-9989-1e79c7982934.png"></p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/bfd14ae9-68a7-4e6f-beea-2297f94f0c0f.png"></p><p>然后右击target1，并点击图中选项</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/d88b0fc6-90d8-4b58-98f3-2ff4de35eabd.png"></p><p>点击output,并勾选create hex file 选项，之后点击ok退出。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/da96a78a-54c0-4a4f-8327-8003509ad37e.png"></p><p>现在再次点击左上的编译检查按钮，就可以看见创建了hex文件，这时去对应文件夹下就可以看见hex文件了。</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/2cad71b7-738a-4728-95df-323fa902ee53.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工训中心 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 软件使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于485总线的评分系统</title>
       <link href="/485/"/>
       <url>/485/</url>
