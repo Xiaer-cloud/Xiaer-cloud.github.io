@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>软件导论之结对编程</title>
+      <link href="/intro-partner/"/>
+      <url>/intro-partner/</url>
+      
+        <content type="html"><![CDATA[<h1 id="mvn-TestPaperGenerator"><a href="#mvn-TestPaperGenerator" class="headerlink" title="mvn-TestPaperGenerator"></a>mvn-TestPaperGenerator</h1><p>HNU结队编程</p><p> 先放一手仓库地址,<a href="https://github.com/KallenBlue/mvn-TestPaperGenerator">仓库在这儿</a></p><hr><p>本项目前后端分离，前端由我100%制作，后端由<a href="http://kallenblue.cn/">伦</a>100%制作</p><p>后端使用了javaweb框架，mybatis管理数据库，maven管理项目，并采用了MVC的管理模式，运行效果良好</p><p>前端技术为基本的html语言加上js代码；在网页设计时采用了semantic ui进行辅助设计，自然也加入jQuery框架。form表单提交由于接口方法和form表单的兼容问题，全部改为了click后调用js函数，使用ajax跳转。</p><h2 id="使用配置"><a href="#使用配置" class="headerlink" title="使用配置"></a>使用配置</h2><h3 id="1-tomcat"><a href="#1-tomcat" class="headerlink" title="1.tomcat"></a>1.tomcat</h3><p>项目使用的tomcat的版本为9.0.65，如果运行异常请检查tomcat版本</p><h3 id="2-mybatis-config-xml文件配置"><a href="#2-mybatis-config-xml文件配置" class="headerlink" title="2.mybatis-config.xml文件配置"></a>2.mybatis-config.xml文件配置</h3><p>文件路径为：src&#x2F;main&#x2F;resources&#x2F;mybatis-config.xml,配置为自己的数据库信息即可</p><p>本项目仅使用user table，ddl放在下面了</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">user</span></span><br><span class="line">(</span><br><span class="line">    account  <span class="type">varchar</span>(<span class="number">12</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">        <span class="keyword">primary</span> key,</span><br><span class="line">    password <span class="type">varchar</span>(<span class="number">15</span>) <span class="keyword">null</span>,</span><br><span class="line">    <span class="keyword">identity</span> <span class="type">varchar</span>(<span class="number">5</span>)  <span class="keyword">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>需要先创建数据库才能正常运行</p><h3 id="3-建议"><a href="#3-建议" class="headerlink" title="3.建议"></a>3.建议</h3><p>建议使用idea运行此项目</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>好像其他没啥了，想到了再加</p><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>这个项目就和简介说的一样，是一个完全靠b站和百度完成的项目。在项目开始之前，甚至说做到了一半之后我才知道是要做javaweb(前端搞静态网页设计，完全没注意这个事)。然后就得去b站看教程，看怎么用tomcat，看怎么用ajax。</p><p>所幸这个项目还是不是很难，好好学学就行了。做到过程充满了快乐，比如学会新的form表单用法，学会新的js用法，学会新的网页跳转。每次学会新技术并且成功在项目里应用的时候整个人是真的开心。这也是我为什么选择了软件这个专业(虽然湖带的这个sb专业和我设想的软件不大一样)。</p><p>导论这门课后面就是团队项目了，得做一个健康码小程序，又是一个全新的领域(乐)。好好学吧！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实验报告 </tag>
+            
+            <tag> 软件导论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件创新课程之个人项目</title>
       <link href="/intro-self/"/>
       <url>/intro-self/</url>
