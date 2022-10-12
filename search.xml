@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>idea-快捷键</title>
+      <link href="/idea/"/>
+      <url>/idea/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快捷键是个好东西，得多学学。</p><hr><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="快捷展开"><a href="#快捷展开" class="headerlink" title="快捷展开"></a>快捷展开</h3><h4 id="main函数展开"><a href="#main函数展开" class="headerlink" title="main函数展开"></a>main函数展开</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psvm + tab</span><br></pre></td></tr></table></figure><h4 id="println输出"><a href="#println输出" class="headerlink" title="println输出"></a>println输出</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sout + tab</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自主学习 </tag>
+            
+            <tag> idea </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Maven-初步</title>
+      <link href="/maven_start/"/>
+      <url>/maven_start/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>仔细算一下,开学到现在5个星期，不对，算上工训中心7个星期了。结果啥都没干，风暴倒是玩了不少(小公主真的好玩)。。。</p><p>摆不动了，再摆要寄了。</p><hr><h2 id="Maven-start"><a href="#Maven-start" class="headerlink" title="Maven-start"></a>Maven-start</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>提供标准化的项目结构，构建流程，依赖管理机制。</p><hr><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/e9a706e2-a8b7-4c34-9022-e8c264c5a949.png" alt="项目结构图"></p><hr><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>本地仓库 -&gt; 远程仓库 -&gt; 中央仓库</p><hr><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>指一次构建过程经历了多少个事件</p><p>一共3套生命周期：</p><p>  -clean:清理工作</p><p>  -default：核心工作，比如编译，打包等</p><p>  -site: 产生报告，发布站点等</p><p>同一生命周期内，执行后续命令，前边的所有命令会自动执行</p><hr><h3 id="maven坐标"><a href="#maven坐标" class="headerlink" title="maven坐标"></a>maven坐标</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/82d3fb37-7076-40c0-9428-301d077363ea.png" alt="坐标参数解释"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> 自主学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件导论之结对编程</title>
       <link href="/intro-partner/"/>
       <url>/intro-partner/</url>
