@@ -4,11 +4,65 @@
   
     
     <entry>
+      <title>database</title>
+      <link href="/database/"/>
+      <url>/database/</url>
+      
+        <content type="html"><![CDATA[<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="键的约束"><a href="#键的约束" class="headerlink" title="键的约束"></a>键的约束</h3><h4 id="auto-increment"><a href="#auto-increment" class="headerlink" title="auto_increment"></a>auto_increment</h4><p>在 MySQL 中，当主键定义为自增长后，这个主键的值就不再需要用户输入数据了，而由数据库系统根据定义自动赋值。每增加一条记录，主键会自动以相同的步长进行增长。</p><p>默认情况下，AUTO_INCREMENT 的初始值是 1，每新增一条记录，字段值自动加 1。</p><p>一个表中只能有一个字段使用 AUTO_INCREMENT 约束，且该字段必须有唯一索引，以避免序号重复（即为主键或主键的一部分）。</p><p>AUTO_INCREMENT 约束的字段必须具备 NOT NULL 属性。</p><p>AUTO_INCREMENT 约束的字段只能是整数类型（TINYINT、SMALLINT、INT、BIGINT 等）。</p><p>AUTO_INCREMENT 约束字段的最大值受该字段的数据类型约束，如果达到上限，AUTO_INCREMENT 就会失效。</p><hr><h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><h3 id="驱动"><a href="#驱动" class="headerlink" title="驱动"></a>驱动</h3><p>部分教程代码中使用的驱动为</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.mysql.jdbc.Driver</span><br></pre></td></tr></table></figure><p>而现在应该使用的是</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.mysql.cj.jdbc.Driver</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自主学习 </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MyBatis</title>
+      <link href="/MyBatis/"/>
+      <url>/MyBatis/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>原来跟着做博客的时候持久层就用的jpa，虽然后面那个铸币企业开发也得考jpa，但还是得学MyBatis，但好像这个也在被淘汰了，麻了。</p><hr><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>持久层框架，用于简化jdbc开发。</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">javaEE三层框架：表现层，业务层，持久层</span><br><span class="line">表现层：用于业务展示</span><br><span class="line">业务层：用于逻辑处理</span><br><span class="line">持久层：负责将数据保存到数据库的代码层 </span><br></pre></td></tr></table></figure><hr><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="项目添加"><a href="#项目添加" class="headerlink" title="项目添加"></a>项目添加</h3><p>先在xml文件中导入mybatis依赖，然后在resources中添加mybatis-config.xml文件以及mapper查询语句文件。对应内容上官网查询</p><hr><h3 id="mapper文件"><a href="#mapper文件" class="headerlink" title="mapper文件"></a>mapper文件</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/24fce40e-025c-469d-a026-5fda1421f3a3.png" alt="mapper文件"></p><p>图中namespace为名称空间，可自定义，作用为区分不同空间中的操作id，类似于接口</p><p>下面每个标签为一个查询语句。id为语句唯一表示符，resultType为查询返回对象，中间部分为sql操作语句。</p><p>对应对象类应该放到pojo软件包中作为pojo类</p><hr><h3 id="主类中使用"><a href="#主类中使用" class="headerlink" title="主类中使用"></a>主类中使用</h3><p>使用时百度，不会有人能记住这些玩意吧</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 加载mybatis的核心配置文件，获取 SqlSessionFactory</span></span><br><span class="line"><span class="type">String</span> <span class="variable">resource</span> <span class="operator">=</span> <span class="string">&quot;mybatis-config.xml&quot;</span>;</span><br><span class="line"><span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> Resources.getResourceAsStream(resource);</span><br><span class="line"><span class="type">SqlSessionFactory</span> <span class="variable">sqlSessionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBuilder</span>().build(inputStream);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 获取SqlSession对象，用它来执行sql</span></span><br><span class="line"><span class="type">SqlSession</span> <span class="variable">sqlSession</span> <span class="operator">=</span> sqlSessionFactory.openSession();</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 执行sql</span></span><br><span class="line">List&lt;User&gt; users = sqlSession.selectList(<span class="string">&quot;test.selectAll&quot;</span>);<span class="comment">//()内为sql语句标识，为空间加上id</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 释放资源</span></span><br><span class="line">sqlSession.close();</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自主学习 </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>idea-快捷键</title>
       <link href="/idea/"/>
       <url>/idea/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快捷键是个好东西，得多学学。</p><hr><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="快捷展开"><a href="#快捷展开" class="headerlink" title="快捷展开"></a>快捷展开</h3><h4 id="main函数展开"><a href="#main函数展开" class="headerlink" title="main函数展开"></a>main函数展开</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psvm + tab</span><br></pre></td></tr></table></figure><h4 id="println输出"><a href="#println输出" class="headerlink" title="println输出"></a>println输出</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sout + tab</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>快捷键是个好东西，得多学学。</p><hr><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="快捷展开"><a href="#快捷展开" class="headerlink" title="快捷展开"></a>快捷展开</h3><h4 id="main函数展开"><a href="#main函数展开" class="headerlink" title="main函数展开"></a>main函数展开</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psvm + tab</span><br></pre></td></tr></table></figure><h4 id="println输出"><a href="#println输出" class="headerlink" title="println输出"></a>println输出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sout + tab</span><br></pre></td></tr></table></figure><hr><h3 id="快捷功能"><a href="#快捷功能" class="headerlink" title="快捷功能"></a>快捷功能</h3><h4 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + alt + l</span><br></pre></td></tr></table></figure><hr><h4 id="依赖查询"><a href="#依赖查询" class="headerlink" title="依赖查询"></a>依赖查询</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alt + insert (惠普🐖🖊电脑莫得insert，fn+e不好使)</span><br></pre></td></tr></table></figure><hr><h4 id="整列操作"><a href="#整列操作" class="headerlink" title="整列操作"></a>整列操作</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alt + 鼠标左键(左键按住不放)</span><br></pre></td></tr></table></figure><hr><h3 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h3><h4 id="数据提交"><a href="#数据提交" class="headerlink" title="数据提交"></a>数据提交</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + enter</span><br></pre></td></tr></table></figure><hr><h4 id="添加行"><a href="#添加行" class="headerlink" title="添加行"></a>添加行</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alt + insert(sb惠普)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -35,7 +89,7 @@
       <link href="/maven_start/"/>
       <url>/maven_start/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>仔细算一下,开学到现在5个星期，不对，算上工训中心7个星期了。结果啥都没干，风暴倒是玩了不少(小公主真的好玩)。。。</p><p>摆不动了，再摆要寄了。</p><hr><h2 id="Maven-start"><a href="#Maven-start" class="headerlink" title="Maven-start"></a>Maven-start</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>提供标准化的项目结构，构建流程，依赖管理机制。</p><hr><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/e9a706e2-a8b7-4c34-9022-e8c264c5a949.png" alt="项目结构图"></p><hr><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>本地仓库 -&gt; 远程仓库 -&gt; 中央仓库</p><hr><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>指一次构建过程经历了多少个事件</p><p>一共3套生命周期：</p><p>  -clean:清理工作</p><p>  -default：核心工作，比如编译，打包等</p><p>  -site: 产生报告，发布站点等</p><p>同一生命周期内，执行后续命令，前边的所有命令会自动执行</p><hr><h3 id="maven坐标"><a href="#maven坐标" class="headerlink" title="maven坐标"></a>maven坐标</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/82d3fb37-7076-40c0-9428-301d077363ea.png" alt="坐标参数解释"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>仔细算一下,开学到现在5个星期，不对，算上工训中心7个星期了。结果啥都没干，风暴倒是玩了不少(小公主真的好玩)。。。</p><p>摆不动了，再摆要寄了。</p><hr><h2 id="Maven-start"><a href="#Maven-start" class="headerlink" title="Maven-start"></a>Maven-start</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>提供标准化的项目结构，构建流程，依赖管理机制。</p><hr><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/e9a706e2-a8b7-4c34-9022-e8c264c5a949.png" alt="项目结构图"></p><hr><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>本地仓库 -&gt; 远程仓库 -&gt; 中央仓库</p><hr><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>指一次构建过程经历了多少个事件</p><p>一共3套生命周期：</p><p>  -clean:清理工作</p><p>  -default：核心工作，比如编译，打包等</p><p>  -site: 产生报告，发布站点等</p><p>同一生命周期内，执行后续命令，前边的所有命令会自动执行</p><hr><h3 id="maven坐标"><a href="#maven坐标" class="headerlink" title="maven坐标"></a>maven坐标</h3><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/82d3fb37-7076-40c0-9428-301d077363ea.png" alt="坐标参数解释"></p><p>依赖范围：指可使用范围</p><p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-0ecbe108-fe1f-4867-af7e-a5814b22090f/d0a9c747-24ae-4bc1-bc88-9bd1066ecc59.png" alt="依赖范围"></p>]]></content>
       
       
       <categories>
