@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>vue</title>
+      <link href="/vue/"/>
+      <url>/vue/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 不想学辣 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自主学习 </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>idea-插件</title>
       <link href="/idea-plugins/"/>
       <url>/idea-plugins/</url>
