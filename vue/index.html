@@ -130,7 +130,7 @@
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'xiaer-8gbrt6qdb9fc65d4',
+      envId: 'https://twikoo-one-kappa.vercel.app/',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -140,7 +140,7 @@
 
   const getCount = () => {
     twikoo.getCommentsCount({
-      envId: 'xiaer-8gbrt6qdb9fc65d4',
+      envId: 'https://twikoo-one-kappa.vercel.app/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
