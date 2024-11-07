@@ -25,56 +25,6 @@
     
     
     <entry>
-      <title>22年5月的博客修改日志</title>
-      <link href="/2022.5.change/"/>
-      <url>/2022.5.change/</url>
-      
-        <content type="html"><![CDATA[<div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-19</p></div></div><div class='timeline-item-content'><p>背景主题</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-20</p></div></div><div class='timeline-item-content'><p>版权卡片</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-30</p></div></div><div class='timeline-item-content'><p>文章加密</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-31</p></div></div><div class='timeline-item-content'><p>留言板卡片</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-31</p></div></div><div class='timeline-item-content'><p>追番列表</p></div></div></div><hr><h2 id="背景主题"><a href="#背景主题" class="headerlink" title="背景主题"></a>背景主题</h2><p>butterfly这个主题的背景一开始是一个下拉图加上纯白图构成的，我觉得也还行。所以刚开始就用了个助手的图当下拉图就没管了。但是我又发现虽然这个下拉图确实很好看，但是这个纯白的背景看起来有点太素了，如果换成其他颜色的话又感觉和上面的图不太配，所以我就把下拉图给去了。但这样就得改改背景了，于是就找到了大佬<a href="https://www.antmoe.com/">@DreamyTZK</a>的背景设置，于是直接借鉴了一 下。效果就是我博客现在的样子，感觉挺不错的。至于详细的过程，可以看看大佬的博客</p><blockquote><p><a href="https://www.antmoe.com/posts/7198453/">Hexo 博客之 butterfly 主题优雅更换背景</a></p></blockquote><p>具体的css配置及使用可以去看大佬的博客，这里只提几个小问题</p><blockquote><p>文章里的butterfly版本是<mark class="hl-label red">2.3.0</mark> ,而我的版本是<mark class="hl-label blue">4.2.1</mark> ,这就导致了部分的class和id对应不上。比如背景就得换成#body-wrap，边栏的透明得在透明的css里新增.card-widget。</p></blockquote><blockquote><p>还有就是由于在css里新增了class和id，导致黑暗模式下部分模块颜色显示是正常的背景颜色，对应着在css里改改就行了。当然，你要是觉得这样很好看的话，不改也行。</p></blockquote><hr><h2 id="版权卡片"><a href="#版权卡片" class="headerlink" title="版权卡片"></a>版权卡片</h2><p>版权卡片本来是不准备改的，但在找其他东西的时候看见了，也就顺便改了，教程如下</p><blockquote><p>Nesxc的<a href="https://www.nesxc.com/117/">butterfly版权美化教程</a></p></blockquote><p>但是我在改背景的时候把整体背景都弄成透明了，所以版权卡片也透明了，不想透明的话在css里加个not(#post-copyright)就行了。</p><hr><h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2><p>本来是准备把整个网站加密的，但感觉每次进来都要输密码好麻烦，所以就用了这个文章加密。但他的输入框在输入的时候好丑，还有就是他那个退出按钮也感觉风格不太搭，回头看看怎么改改。项目地址如下</p><blockquote><p>MikeCoder的<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>项目</p></blockquote><hr><h2 id="留言板卡片"><a href="#留言板卡片" class="headerlink" title="留言板卡片"></a>留言板卡片</h2><p>我薇！！！！！！但下面的2233娘,emmmmm,我回头找个时间把这个给弄弄。教程地址：</p><blockquote><p>店长的<a href="https://akilar.top/posts/e2d3c450/">Envelope Style Comments Bar</a></p></blockquote><hr><h2 id="追番列表"><a href="#追番列表" class="headerlink" title="追番列表"></a>追番列表</h2><p>找了很久，就只找到这个插件。但是这个展示会把所有的追番都搞出来，我觉得有点多了，就新注册了个bangumi的号展示最近的。</p><blockquote><p>有个小问题，更新bangumi番剧的时候总要跳”Error Error: connect ETIMEDOUT”的错误，我估摸着是他的展示是按b站来的，但bangumi没有人数这些统计，就导致了这个数据库连接错误的问题。也没啥改的必要，就是看着有点烦。</p></blockquote><blockquote><p>参考教程：HCLonely的<a href="https://hclonely.gitee.io/posts/8422e92e/">Hexo哔哩哔哩番剧页面插件</a></p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 博客 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 日志 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于博客的一些事情</title>
-      <link href="/1/"/>
-      <url>/1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>  其实一开始我是不准备用博客模板的，因为我这个人不是很喜欢用自己不了解的东西。所以我花了大 半个月去从0开始写了一个博客。顺便还练了练自己上个学期有点摆烂的Java和这个学期学的数据库啥的。在写的过程中遇到了一堆莫名奇妙的bug和折磨的期中考试。但我还是一直在做。本来吧，基本上都差不多已经写完了，但是我忽略了移动端适应的问题。结果在网页上面看着好好的界面，一缩小就直接gg。然后我自然要去搞这个移动端适应，对吧。但在折磨了大半个月之后，我发现我还是放弃的好,不然，我就该没时间复习期末了。</p><h1 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h1><p>  之所以会用hexo，主要原因是懒，所以干脆就直接摆烂了。然后在熟悉的时候，果然出现了一堆莫名奇妙的问题，但，还好它们都被顺利的解决了。现在这个博客也算是可以正常使用了（大雾）。但也就是能用而已，像什么nav的索引设置啊，底部footer的样式类型啊，评论留言啊什么的可以说是根本没有。但，它可以用了，所以，就这样吧，先用着再说，然后慢慢改吧。我估摸着，要把这个博客改的差不多符合我预期的话，得到期末了吧（虽然现在好像就是期末了）。那就先这样吧，快快乐乐摆大烂！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 回忆 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>postgraduate</title>
       <link href="/postgraduate/"/>
       <url>/postgraduate/</url>
@@ -370,9 +320,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> keil </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -450,6 +400,56 @@
             <tag> 实验报告 </tag>
             
             <tag> 计算机系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>22年5月的博客修改日志</title>
+      <link href="/2022_5_change/"/>
+      <url>/2022_5_change/</url>
+      
+        <content type="html"><![CDATA[<div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-19</p></div></div><div class='timeline-item-content'><p>背景主题</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-20</p></div></div><div class='timeline-item-content'><p>版权卡片</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-30</p></div></div><div class='timeline-item-content'><p>文章加密</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-31</p></div></div><div class='timeline-item-content'><p>留言板卡片</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>05-31</p></div></div><div class='timeline-item-content'><p>追番列表</p></div></div></div><hr><h2 id="背景主题"><a href="#背景主题" class="headerlink" title="背景主题"></a>背景主题</h2><p>butterfly这个主题的背景一开始是一个下拉图加上纯白图构成的，我觉得也还行。所以刚开始就用了个助手的图当下拉图就没管了。但是我又发现虽然这个下拉图确实很好看，但是这个纯白的背景看起来有点太素了，如果换成其他颜色的话又感觉和上面的图不太配，所以我就把下拉图给去了。但这样就得改改背景了，于是就找到了大佬<a href="https://www.antmoe.com/">@DreamyTZK</a>的背景设置，于是直接借鉴了一 下。效果就是我博客现在的样子，感觉挺不错的。至于详细的过程，可以看看大佬的博客</p><blockquote><p><a href="https://www.antmoe.com/posts/7198453/">Hexo 博客之 butterfly 主题优雅更换背景</a></p></blockquote><p>具体的css配置及使用可以去看大佬的博客，这里只提几个小问题</p><blockquote><p>文章里的butterfly版本是<mark class="hl-label red">2.3.0</mark> ,而我的版本是<mark class="hl-label blue">4.2.1</mark> ,这就导致了部分的class和id对应不上。比如背景就得换成#body-wrap，边栏的透明得在透明的css里新增.card-widget。</p></blockquote><blockquote><p>还有就是由于在css里新增了class和id，导致黑暗模式下部分模块颜色显示是正常的背景颜色，对应着在css里改改就行了。当然，你要是觉得这样很好看的话，不改也行。</p></blockquote><hr><h2 id="版权卡片"><a href="#版权卡片" class="headerlink" title="版权卡片"></a>版权卡片</h2><p>版权卡片本来是不准备改的，但在找其他东西的时候看见了，也就顺便改了，教程如下</p><blockquote><p>Nesxc的<a href="https://www.nesxc.com/117/">butterfly版权美化教程</a></p></blockquote><p>但是我在改背景的时候把整体背景都弄成透明了，所以版权卡片也透明了，不想透明的话在css里加个not(#post-copyright)就行了。</p><hr><h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2><p>本来是准备把整个网站加密的，但感觉每次进来都要输密码好麻烦，所以就用了这个文章加密。但他的输入框在输入的时候好丑，还有就是他那个退出按钮也感觉风格不太搭，回头看看怎么改改。项目地址如下</p><blockquote><p>MikeCoder的<a href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>项目</p></blockquote><hr><h2 id="留言板卡片"><a href="#留言板卡片" class="headerlink" title="留言板卡片"></a>留言板卡片</h2><p>我薇！！！！！！但下面的2233娘,emmmmm,我回头找个时间把这个给弄弄。教程地址：</p><blockquote><p>店长的<a href="https://akilar.top/posts/e2d3c450/">Envelope Style Comments Bar</a></p></blockquote><hr><h2 id="追番列表"><a href="#追番列表" class="headerlink" title="追番列表"></a>追番列表</h2><p>找了很久，就只找到这个插件。但是这个展示会把所有的追番都搞出来，我觉得有点多了，就新注册了个bangumi的号展示最近的。</p><blockquote><p>有个小问题，更新bangumi番剧的时候总要跳”Error Error: connect ETIMEDOUT”的错误，我估摸着是他的展示是按b站来的，但bangumi没有人数这些统计，就导致了这个数据库连接错误的问题。也没啥改的必要，就是看着有点烦。</p></blockquote><blockquote><p>参考教程：HCLonely的<a href="https://hclonely.gitee.io/posts/8422e92e/">Hexo哔哩哔哩番剧页面插件</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于博客的一些事情</title>
+      <link href="/start/"/>
+      <url>/start/</url>
+      
+        <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>  其实一开始我是不准备用博客模板的，因为我这个人不是很喜欢用自己不了解的东西。所以我花了大 半个月去从0开始写了一个博客。顺便还练了练自己上个学期有点摆烂的Java和这个学期学的数据库啥的。在写的过程中遇到了一堆莫名奇妙的bug和折磨的期中考试。但我还是一直在做。本来吧，基本上都差不多已经写完了，但是我忽略了移动端适应的问题。结果在网页上面看着好好的界面，一缩小就直接gg。然后我自然要去搞这个移动端适应，对吧。但在折磨了大半个月之后，我发现我还是放弃的好,不然，我就该没时间复习期末了。</p><h1 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h1><p>  之所以会用hexo，主要原因是懒，所以干脆就直接摆烂了。然后在熟悉的时候，果然出现了一堆莫名奇妙的问题，但，还好它们都被顺利的解决了。现在这个博客也算是可以正常使用了（大雾）。但也就是能用而已，像什么nav的索引设置啊，底部footer的样式类型啊，评论留言啊什么的可以说是根本没有。但，它可以用了，所以，就这样吧，先用着再说，然后慢慢改吧。我估摸着，要把这个博客改的差不多符合我预期的话，得到期末了吧（虽然现在好像就是期末了）。那就先这样吧，快快乐乐摆大烂！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 回忆 </tag>
             
         </tags>
       
